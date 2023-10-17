@@ -3,7 +3,7 @@
  */
 
 package com.mycompany.csc325_oop_designreview_lab;
-
+import java.util.Scanner;
 /**
  *
  * @author MoaathAlrajab
@@ -25,16 +25,36 @@ public class MainClass {
 		Student std1= new Student("James", 20);
                 // ToDo 11: Add a toString method for the Senior class
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
+		Freshman std2= new Freshman("James", 20, 12); // name, age, credits
 
-                Senior std2 = new Student("John", 30, 90);
+                Senior std3 = new Senior("John", 30, 90);
 
 		// ToDo 12: Set the gpa of the student using the scanner and user
 		// 			input and then print the output.
 
-		System.out.println(std1);
+	 Scanner scanner = new Scanner(System.in);
+	 System.out.print("Enter the GPA for " + std1.getName() + ": ");
+	 double gpa1 = scanner.nextDouble();
+	 std1.setGpa(gpa1);
+	 scanner.nextLine(); // Consume the newline character
 
-                System.out.println(std2);
+	 System.out.print("Enter the GPA for " + std2.getName() + ": ");
+	 double gpa2 = scanner.nextDouble();
+	 std2.setGpa(gpa2);
+	 scanner.nextLine(); // Consume the newline character
+
+	 System.out.print("Enter the GPA for " + std3.getName() + ": ");
+	 double gpa3 = scanner.nextDouble();
+	 std3.setGpa(gpa3);
+	 scanner.nextLine(); // Consume the newline character
+
+	 // ...
+
+	 scanner.close(); // Close the scanner
+
+	 System.out.println(std1);
+	 System.out.println(std2);
+	 System.out.println(std3);
 
 		// ToDo 13: add comments and explain your code
 
